@@ -91,8 +91,7 @@ export default {
         "float": "float 4s ease-in-out infinite",
         "spin-slow": "spin-slow 12s linear infinite",
       },
-    },
-    },
+  },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
