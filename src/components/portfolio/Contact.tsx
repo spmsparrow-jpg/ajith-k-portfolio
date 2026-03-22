@@ -109,8 +109,8 @@ const Contact = () => {
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   className="bg-secondary border-border rounded-lg resize-none"
                 />
-                <Button type="submit" className="self-end rounded-full px-8">
-                  Send Message <Send className="ml-1 !size-4" />
+                <Button type="submit" className="self-end rounded-full px-8" disabled={sending}>
+                  {sending ? <><Loader2 className="mr-1 !size-4 animate-spin" /> Sending...</> : <>Send Message <Send className="ml-1 !size-4" /></>}
                 </Button>
               </form>
             </div>
