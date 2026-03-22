@@ -5,9 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/ajith-k-portfolio/',  // Replace with your repo name if different
+  base: mode === "production" ? '/ajith-k-portfolio/' : '/',
   server: {
-    host: "::",
+    host: "localhost",
     port: 8080,
     hmr: {
       overlay: false,
