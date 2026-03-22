@@ -25,12 +25,12 @@ const Navbar = () => {
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md shadow-sm"
+          ? "bg-background/80 backdrop-blur-md border-b border-border"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="text-lg font-semibold tracking-tight text-foreground">
+        <a href="#" className="text-lg font-black tracking-tight text-foreground">
           Ajith<span className="text-primary">.</span>
         </a>
 
@@ -40,7 +40,7 @@ const Navbar = () => {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
               >
                 {l.label}
               </a>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 <a
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   {l.label}
                 </a>
